@@ -1,0 +1,10 @@
+
+import math
+max_line = 0
+greatest_val = 0
+exp = [[int(x) for x in y.split(',')] for y in open('p099_base_exp.txt', 'r').read().split('\n')]
+for line, (base, exponent) in enumerate(exp):
+    print(max_line)
+    if greatest_val < (p := math.log(base) * exponent) :
+        max_line, greatest_val = line, p
+    
